@@ -1,0 +1,409 @@
+[
+  {
+    "id": 1,
+    "name": "Portable Power Bank",
+    "category": "Electronics",
+    "price": 25.99,
+    "stock": 300,
+    "description": "Compact power bank with 10000mAh capacity."
+  },
+  {
+    "id": 2,
+    "name": "Wireless Mouse",
+    "category": "Electronics",
+    "price": 15.49,
+    "stock": 500,
+    "description": "Ergonomic wireless mouse with adjustable DPI."
+  },
+  {
+    "id": 3,
+    "name": "Bluetooth Headphones",
+    "category": "Electronics",
+    "price": 49.99,
+    "stock": 200,
+    "description": "Over-ear Bluetooth headphones with noise isolation."
+  },
+  {
+    "id": 4,
+    "name": "USB-C Charging Cable",
+    "category": "Electronics",
+    "price": 9.99,
+    "stock": 800,
+    "description": "Durable fast-charging USB-C cable."
+  },
+  {
+    "id": 5,
+    "name": "Smartphone Stand",
+    "category": "Accessories",
+    "price": 7.99,
+    "stock": 600,
+    "description": "Adjustable stand for smartphones and tablets."
+  },
+  {
+    "id": 6,
+    "name": "Laptop Backpack",
+    "category": "Accessories",
+    "price": 39.99,
+    "stock": 150,
+    "description": "Water-resistant backpack with laptop compartment."
+  },
+  {
+    "id": 7,
+    "name": "Wireless Keyboard",
+    "category": "Electronics",
+    "price": 29.99,
+    "stock": 350,
+    "description": "Slim wireless keyboard with silent keys."
+  },
+  {
+    "id": 8,
+    "name": "LED Desk Lamp",
+    "category": "Home",
+    "price": 22.99,
+    "stock": 250,
+    "description": "LED desk lamp with adjustable brightness."
+  },
+  {
+    "id": 9,
+    "name": "Smart Watch",
+    "category": "Electronics",
+    "price": 99.99,
+    "stock": 120,
+    "description": "Fitness smartwatch with heart-rate monitoring."
+  },
+  {
+    "id": 10,
+    "name": "Phone Case",
+    "category": "Accessories",
+    "price": 12.99,
+    "stock": 700,
+    "description": "Shockproof phone case with matte finish."
+  },
+
+  {
+    "id": 11,
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 45.99,
+    "stock": 180,
+    "description": "Portable Bluetooth speaker with deep bass."
+  },
+  {
+    "id": 12,
+    "name": "USB Flash Drive",
+    "category": "Electronics",
+    "price": 11.99,
+    "stock": 900,
+    "description": "64GB USB 3.0 flash drive."
+  },
+  {
+    "id": 13,
+    "name": "Webcam",
+    "category": "Electronics",
+    "price": 55.49,
+    "stock": 140,
+    "description": "HD webcam for video calls and streaming."
+  },
+  {
+    "id": 14,
+    "name": "Monitor Stand",
+    "category": "Accessories",
+    "price": 27.99,
+    "stock": 220,
+    "description": "Adjustable monitor stand for better posture."
+  },
+  {
+    "id": 15,
+    "name": "Gaming Mouse Pad",
+    "category": "Accessories",
+    "price": 14.99,
+    "stock": 400,
+    "description": "Large mouse pad with smooth surface."
+  },
+  {
+    "id": 16,
+    "name": "External Hard Drive",
+    "category": "Electronics",
+    "price": 79.99,
+    "stock": 90,
+    "description": "1TB external hard drive for data backup."
+  },
+  {
+    "id": 17,
+    "name": "Wireless Earbuds",
+    "category": "Electronics",
+    "price": 59.99,
+    "stock": 210,
+    "description": "True wireless earbuds with charging case."
+  },
+  {
+    "id": 18,
+    "name": "HDMI Cable",
+    "category": "Electronics",
+    "price": 10.49,
+    "stock": 650,
+    "description": "High-speed HDMI cable supporting 4K."
+  },
+  {
+    "id": 19,
+    "name": "Power Strip",
+    "category": "Home",
+    "price": 18.99,
+    "stock": 320,
+    "description": "Power strip with surge protection."
+  },
+  {
+    "id": 20,
+    "name": "Laptop Cooling Pad",
+    "category": "Accessories",
+    "price": 24.99,
+    "stock": 170,
+    "description": "Cooling pad with dual silent fans."
+  },
+
+  {
+    "id": 21,
+    "name": "Wireless Charger",
+    "category": "Electronics",
+    "price": 19.99,
+    "stock": 290,
+    "description": "Fast wireless charging pad."
+  },
+  {
+    "id": 22,
+    "name": "Smart Plug",
+    "category": "Home",
+    "price": 16.99,
+    "stock": 260,
+    "description": "WiFi smart plug with app control."
+  },
+  {
+    "id": 23,
+    "name": "Noise Cancelling Headphones",
+    "category": "Electronics",
+    "price": 129.99,
+    "stock": 80,
+    "description": "Active noise cancelling over-ear headphones."
+  },
+  {
+    "id": 24,
+    "name": "Tablet Cover",
+    "category": "Accessories",
+    "price": 21.99,
+    "stock": 310,
+    "description": "Protective tablet cover with stand."
+  },
+  {
+    "id": 25,
+    "name": "Portable Power Bank",
+    "category": "Electronics",
+    "price": 25.99,
+    "stock": 300,
+    "description": "Compact power bank with 10000mAh capacity."
+  },
+
+  {
+    "id": 26,
+    "name": "Fitness Tracker",
+    "category": "Electronics",
+    "price": 49.99,
+    "stock": 190,
+    "description": "Fitness tracker with sleep monitoring."
+  },
+  {
+    "id": 27,
+    "name": "Desk Organizer",
+    "category": "Home",
+    "price": 13.99,
+    "stock": 420,
+    "description": "Multi-compartment desk organizer."
+  },
+  {
+    "id": 28,
+    "name": "Screen Cleaner Kit",
+    "category": "Accessories",
+    "price": 8.99,
+    "stock": 550,
+    "description": "Cleaning kit for screens and lenses."
+  },
+  {
+    "id": 29,
+    "name": "Car Phone Mount",
+    "category": "Accessories",
+    "price": 14.49,
+    "stock": 360,
+    "description": "Dashboard car phone holder."
+  },
+  {
+    "id": 30,
+    "name": "USB Hub",
+    "category": "Electronics",
+    "price": 23.99,
+    "stock": 230,
+    "description": "4-port USB hub with high-speed data transfer."
+  },
+
+  {
+    "id": 31,
+    "name": "Smart LED Bulb",
+    "category": "Home",
+    "price": 17.99,
+    "stock": 410,
+    "description": "Color-changing smart LED bulb."
+  },
+  {
+    "id": 32,
+    "name": "Laptop Sleeve",
+    "category": "Accessories",
+    "price": 18.49,
+    "stock": 280,
+    "description": "Protective laptop sleeve with padding."
+  },
+  {
+    "id": 33,
+    "name": "Action Camera",
+    "category": "Electronics",
+    "price": 149.99,
+    "stock": 60,
+    "description": "Waterproof action camera with 4K recording."
+  },
+  {
+    "id": 34,
+    "name": "Tripod Stand",
+    "category": "Accessories",
+    "price": 26.99,
+    "stock": 200,
+    "description": "Adjustable tripod for camera and phone."
+  },
+  {
+    "id": 35,
+    "name": "Router",
+    "category": "Electronics",
+    "price": 69.99,
+    "stock": 110,
+    "description": "Dual-band WiFi router."
+  },
+
+  {
+    "id": 36,
+    "name": "Keyboard Wrist Rest",
+    "category": "Accessories",
+    "price": 11.99,
+    "stock": 390,
+    "description": "Memory foam wrist rest for keyboards."
+  },
+  {
+    "id": 37,
+    "name": "Surge Protector",
+    "category": "Home",
+    "price": 21.49,
+    "stock": 260,
+    "description": "Surge protector with multiple outlets."
+  },
+  {
+    "id": 38,
+    "name": "Digital Alarm Clock",
+    "category": "Home",
+    "price": 19.99,
+    "stock": 240,
+    "description": "LED digital alarm clock with snooze."
+  },
+  {
+    "id": 39,
+    "name": "Smart Door Sensor",
+    "category": "Home",
+    "price": 24.49,
+    "stock": 170,
+    "description": "Smart sensor for door and window security."
+  },
+  {
+    "id": 40,
+    "name": "Microphone",
+    "category": "Electronics",
+    "price": 59.49,
+    "stock": 130,
+    "description": "USB microphone for recording and streaming."
+  },
+
+  {
+    "id": 41,
+    "name": "Laptop Stand",
+    "category": "Accessories",
+    "price": 34.99,
+    "stock": 160,
+    "description": "Aluminum laptop stand with ventilation."
+  },
+  {
+    "id": 42,
+    "name": "Smart Scale",
+    "category": "Home",
+    "price": 44.99,
+    "stock": 140,
+    "description": "Digital smart weighing scale."
+  },
+  {
+    "id": 43,
+    "name": "Ethernet Cable",
+    "category": "Electronics",
+    "price": 7.99,
+    "stock": 700,
+    "description": "High-speed LAN ethernet cable."
+  },
+  {
+    "id": 44,
+    "name": "Cable Organizer",
+    "category": "Accessories",
+    "price": 6.99,
+    "stock": 650,
+    "description": "Cable clips for desk organization."
+  },
+  {
+    "id": 45,
+    "name": "Smart Night Lamp",
+    "category": "Home",
+    "price": 18.99,
+    "stock": 210,
+    "description": "Touch control smart night lamp."
+  },
+
+  {
+    "id": 46,
+    "name": "Portable SSD",
+    "category": "Electronics",
+    "price": 119.99,
+    "stock": 75,
+    "description": "512GB portable SSD with fast transfer speed."
+  },
+  {
+    "id": 47,
+    "name": "VR Headset",
+    "category": "Electronics",
+    "price": 199.99,
+    "stock": 40,
+    "description": "Virtual reality headset for immersive gaming."
+  },
+  {
+    "id": 48,
+    "name": "Screen Protector",
+    "category": "Accessories",
+    "price": 5.99,
+    "stock": 900,
+    "description": "Tempered glass screen protector."
+  },
+  {
+    "id": 49,
+    "name": "Smart Remote",
+    "category": "Electronics",
+    "price": 29.49,
+    "stock": 180,
+    "description": "Universal smart remote with app support."
+  },
+  {
+    "id": 50,
+    "name": "Portable Fan",
+    "category": "Home",
+    "price": 16.99,
+    "stock": 260,
+    "description": "USB rechargeable portable fan."
+  }
+]
