@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import mongoose  from "mongoose"
 
 import authRoutes from "./routes/auth.routes.js"
+import privateRoutes from "./routes/private.routes.js"
 
 dotenv.config()
 const app = express()
@@ -12,6 +13,7 @@ const PORT = process.env.PORT || 3003
 mongoose.connect(process.env.MONGO_URI).then(() => (console.log("mongodb connected"))).catch((err) => console.log("mongodb connection error : " , err))
 
 app.use("/auth" , authRoutes)
+app.use("/private" , privateRoutes)
 
 app.listen(PORT , () => {
     console.log("server is running")
