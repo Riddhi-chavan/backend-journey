@@ -7,7 +7,7 @@ export const getUserforSideBar = async (req, res) => {
         const loggedInUserId = req.user._id;
         const filteredUsers = await User.find({ _id: { $ne: loggedInUserId } }).select("-password");
 
-        res.status(200).json({ filteredUsers })
+        res.status(200).json(filteredUsers)
     } catch (error) {
         console.log("Error in getUserforSidebar contoller : ", error.message)
         res.status(500).json({
@@ -20,7 +20,7 @@ export const getUserforSideBar = async (req, res) => {
 
 export const getMessages = async (req, res) => {
     try {
-        const {id : userToChatId} = req.param
+        const {id : userToChatId} = req.params
         const myId  = req.user._id
         const message = await Message.find({
             $or : [
