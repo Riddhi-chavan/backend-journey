@@ -129,7 +129,13 @@ export const updateProfile = async (req , res) => {
 
 export const checkAuth = async (req , res) => {
     try {
-        res.status(200).json(req.user)
+        const user = {
+            _id: req.user._id,
+            fullName: req.user.fullName,
+            email: req.user.email,
+            profilePic: req.user.profilePic
+        };
+        res.status(200).json(user);
     } catch (error) {
         console.log("Error in check contoller : " , error.message)
          res.status(500).json({
