@@ -12,10 +12,23 @@ const io = new Server(server , {
     }
 })
 
+export function getReceiverSocketId(userId){
+    return userSocketMap[userId]
+}
+
+const userSocketMap = {};
+
 io.on("connection" , (socket)=> {
     console.log("user connected" , socket.id)
+    const userId = socket.handshake.query.userId
+    if (userId) userSocketMap[userId] = socket.id
+
+    // io.emit() is used to send event to all the connected client
+    io.emit("getOnlineUser" , Object.keys(userSocketMap))
     socket.on("disconnect" , ()=> {
         console.log("User disconnected" , socket.id)
+        delete userSocketMap[userId]
+        io.emit("")
     })
 })
 
