@@ -5,7 +5,7 @@ import ChatHeader from "./ChatHeader";
 import MessageInput from "./MessageInput";
 import MessageSkeleton from "./skeletons/MessageSkeleton";
 import { useAuthStore } from "../store/useAuthStore";
-// import { formatMessageTime } from "../lib/utils";
+// import { formatMessageTime } from "";
 
 const ChatContainer = () => {
   const {
@@ -13,21 +13,17 @@ const ChatContainer = () => {
     getMessages,
     isMessagesLoading,
     selectedUser,
-    // subscribeToMessage,
-    // unsubscribeFromMessages
+    subscribeToMessage,
+    unsubscribeFromMessages
   } = useChatStore();
   const { authUser } = useAuthStore();
   const messageEndRef = useRef(null);
 
   useEffect(() => {
     getMessages(selectedUser._id);
-    // subscribeToMessage()
-
-
-//   return  ()=>unsubscribeFromMessages()
-
-   
-  }, [ getMessages , selectedUser._id ]);
+    subscribeToMessage()
+  return  ()=>unsubscribeFromMessages()
+  }, [ getMessages , selectedUser._id  , subscribeToMessage , unsubscribeFromMessages]);
 
   useEffect(() => {
     if (messageEndRef.current && messages) {
