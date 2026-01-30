@@ -7,7 +7,7 @@ export const useChatStore = create((set, get) => ({
   messages: [],
   users: [],
   isTyping:false,
- 
+  typingUsers: {},
   selectedUser: null,
   isUsersLoading: false,
   isMessagesLoading: false,
@@ -63,10 +63,17 @@ export const useChatStore = create((set, get) => ({
     })
 
     socket.on("userTyping", ({ senderId, isTyping }) => {
-    if (senderId === selectedUser._id) {
-      set({ isTyping });
-    }
-  });
+      set((state) => ({
+        typingUsers: {
+          ...state.typingUsers,
+          [senderId]: isTyping
+        }
+      }));
+
+      if (senderId === selectedUser._id) {
+        set({ isTyping });
+      }
+    });
   },
 
   unsubscribeFromMessages : () => {
