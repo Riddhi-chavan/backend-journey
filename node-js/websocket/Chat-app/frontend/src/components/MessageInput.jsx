@@ -2,16 +2,16 @@ import { useRef, useState } from "react";
 import { useChatStore } from "../store/useChatStore";
 import { Image, Send, X } from "lucide-react";
 import toast from "react-hot-toast";
+import { useAuthStore } from "../store/useAuthStore";
 
 const MessageInput = () => {
   const [text, setText] = useState("");
   const [imagePreview, setImagePreview] = useState(null);
-
-  const {setTyping , isTyping } = useChatStore();
-
-  const fileInputRef = useRef(null);
+  const { sendMessage, selectedUser } = useChatStore();
+  const { socket } = useAuthStore();
   
-  const { sendMessage } = useChatStore();
+  const fileInputRef = useRef(null);
+  const typingTimeoutRef = useRef(null);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -26,11 +26,41 @@ const MessageInput = () => {
     };
     reader.readAsDataURL(file);
   };
-  const handleTextInput = (e)=>{
-    e.preventDefault();
-    
+
+  const handleTextInput = (e) => {
     setText(e.target.value);
-  }
+    
+    // Emit typing event
+    if (socket && selectedUser) {
+      socket.emit("typing", { 
+        receiverId: selectedUser._id, 
+        isTyping: true 
+      });
+
+      // Clear previous timeout
+      if (typingTimeoutRef.current) {
+        clearTimeout(typingTimeoutRef.current);
+      }
+
+      // Stop typing after 2 seconds of inactivity
+      typingTimeoutRef.current = setTimeout(() => {
+        socket.emit("typing", { 
+          receiverId: selectedUser._id, 
+          isTyping: false 
+        });
+      }, 2000);
+    }
+  };
+
+  const handleBlur = () => {
+    // Stop typing when input loses focus
+    if (socket && selectedUser) {
+      socket.emit("typing", { 
+        receiverId: selectedUser._id, 
+        isTyping: false 
+      });
+    }
+  };
 
   const removeImage = () => {
     setImagePreview(null);
@@ -42,12 +72,19 @@ const MessageInput = () => {
     if (!text.trim() && !imagePreview) return;
 
     try {
+      // Stop typing when sending message
+      if (socket && selectedUser) {
+        socket.emit("typing", { 
+          receiverId: selectedUser._id, 
+          isTyping: false 
+        });
+      }
+
       await sendMessage({
         text: text.trim(),
         image: imagePreview,
       });
 
-      // Clear form
       setText("");
       setImagePreview(null);
       if (fileInputRef.current) fileInputRef.current.value = "";
@@ -56,7 +93,6 @@ const MessageInput = () => {
     }
   };
 
-  console.log(isTyping)
   return (
     <div className="p-4 w-full">
       {imagePreview && (
@@ -87,8 +123,7 @@ const MessageInput = () => {
             placeholder="Type a message..."
             value={text}
             onChange={handleTextInput}
-         
-            onFocus={(e)=>setTyping(true)}
+            onBlur={handleBlur}
           />
           <input
             type="file"

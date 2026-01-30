@@ -61,13 +61,22 @@ export const useChatStore = create((set, get) => ({
         })
       }
     })
+
+    socket.on("userTyping", ({ senderId, isTyping }) => {
+    if (senderId === selectedUser._id) {
+      set({ isTyping });
+    }
+  });
   },
 
   unsubscribeFromMessages : () => {
     const socket = useAuthStore.getState().socket
     socket.off("newMessage")
+    socket.off("userTyping");
   },
 
+  
+
   setSelectedUser: (selectedUser) => set({ selectedUser }),
-//   setTyping:(isTyping)=>set({isTyping})
+  setTyping:(isTyping)=>set({isTyping})
 }));
