@@ -18,7 +18,7 @@ app.use(express.json())
 app.use(cookieparser())
 app.use(
     cors({
-        origin : ["http://localhost:5173"],
+        origin: process.env.FRONTEND_URL || "http://localhost:5173",
         credentials : true
     })
 )
@@ -30,4 +30,3 @@ server.listen(PORT , () => {
     console.log("Server is running on port" , PORT)
     connectDB()
 })
-
